@@ -4,7 +4,7 @@ import "fmt"
 
 func basic() {
 	var a = 10
-	fmt.Printf("%_global", &a)
+	fmt.Printf("%v_global", &a)
 	fmt.Println()
 
 	// init a pointer
@@ -72,7 +72,7 @@ func passing_pointer(){
 }
 
 func main() {
-	//basic()
+	basic()
 	//array()
 	//passing_pointer()
 

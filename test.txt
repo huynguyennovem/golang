@@ -1,0 +1,4 @@
+the static files from disk rather than from
+the binary during development.
+This prevents the need for re-compilation
+during development when only static files change.
