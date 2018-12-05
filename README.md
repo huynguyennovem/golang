@@ -1,1 +1,1 @@
-# golang
+# Golang basic scripts
