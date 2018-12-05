@@ -9,13 +9,13 @@ func main() {
 
 	ret = max(a, b)
 
-	fmt.Printf( "Max value is : %d\n", ret )
+	fmt.Printf("Max value is : %d\n", ret)
 }
 
 func max(num1, num2 int) int {
 	var result int
 
-	if (num1 > num2) {
+	if num1 > num2 {
 		result = num1
 	} else {
 		result = num2

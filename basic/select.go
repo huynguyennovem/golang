@@ -24,11 +24,11 @@ func main() {
 	go server1(output1)
 	go server2(output2)
 	select {
-		case s1 := <-output1:
-			fmt.Println(s1)
-		case s2 := <-output2:
-			fmt.Println(s2)
-		default:
-			fmt.Println("no one")
+	case s1 := <-output1:
+		fmt.Println(s1)
+	case s2 := <-output2:
+		fmt.Println(s2)
+	default:
+		fmt.Println("no one")
 	}
 }

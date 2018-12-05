@@ -5,11 +5,11 @@ import (
 	"time"
 )
 
-func test1(){
+func test1() {
 	fmt.Println("111")
 }
 
-func test2(){
+func test2() {
 	fmt.Println("222")
 }
 

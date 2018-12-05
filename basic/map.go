@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var _map map[string] int
+	var _map map[string]int
 	fmt.Println(_map)
-	_map = make(map[string] int)
+	_map = make(map[string]int)
 
 	// assign pair
 	_map["sss"] = 5

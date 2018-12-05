@@ -16,5 +16,4 @@ func main() {
 
 	box := packr.NewBox("../packbox")
 
-
 }

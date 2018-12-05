@@ -42,9 +42,9 @@ func main() {
 	go test_goroutines(test)
 
 	// read from channel
-	_receiver_chan := <- test
+	_receiver_chan := <-test
 
-	fmt.Println("_receiver_chan",_receiver_chan)
+	fmt.Println("_receiver_chan", _receiver_chan)
 	fmt.Println("_global", _global)
 	fmt.Println("continue to main thread")
 

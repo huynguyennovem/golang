@@ -41,14 +41,14 @@ func simple() func(a, b int) int {
 	return f
 }
 
-func return_func(){
+func return_func() {
 	s := simple()
 	fmt.Println(s(60, 7))
 }
 
 //////////////////////////
 
-func closure_func(){
+func closure_func() {
 	a := 5
 	func() {
 		fmt.Println("a =", a)

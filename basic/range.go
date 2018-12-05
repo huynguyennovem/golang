@@ -47,7 +47,7 @@ func main() {
 		"Go is a concurrent language and not a parallel one",
 	}
 	posts := []post{post1, post2, post3}
-	for _, p := range posts { 	// in this case _ is index, p is value
+	for _, p := range posts { // in this case _ is index, p is value
 		p.details()
 		fmt.Println()
 	}

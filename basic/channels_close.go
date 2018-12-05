@@ -80,13 +80,13 @@ func add_numbers(out_chn chan int) {
 	close(out_chn)
 }
 
-func intergrate_channel(){
+func intergrate_channel() {
 	chn1 := make(chan string)
 	chn2 := make(chan int)
 	go merge_alphabets(chn1)
 	go add_numbers(chn2)
 
-	a, b := <- chn1, <-chn2
+	a, b := <-chn1, <-chn2
 	fmt.Println(a, b)
 }
 

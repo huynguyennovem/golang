@@ -6,7 +6,6 @@ func undirectional_chan(sendchan chan<- int) {
 	sendchan <- 10
 }
 
-
 func main() {
 
 	sendch := make(chan int)

@@ -10,8 +10,9 @@ type Employee struct {
 	TotalLeaves int
 	LeavesTaken int
 }
+
 func New(firstName string, lastName string, totalLeave int, leavesTaken int) Employee {
-	e := Employee {firstName, lastName, totalLeave, leavesTaken}
+	e := Employee{firstName, lastName, totalLeave, leavesTaken}
 	return e
 }
 func (e Employee) LeavesRemaining() {
