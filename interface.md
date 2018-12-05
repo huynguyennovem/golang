@@ -59,12 +59,12 @@ type Contract struct {
     basicpay int
 }
 
-//salary of permanent employee is sum of basic pay and pf
+class
 func (p Permanent) CalculateSalary() int {  
     return p.basicpay + p.pf
 }
 
-//salary of contract employee is the basic pay alone
+class
 func (c Contract) CalculateSalary() int {  
     return c.basicpay
 }
