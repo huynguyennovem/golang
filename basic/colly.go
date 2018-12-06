@@ -22,10 +22,15 @@ func main() {
 	}
 	c.SetProxyFunc(rp)
 
+	c.OnRequest(func(request *colly.Request) {
+		fmt.Println("Requesting " + request.URL.String() + " ...")
+	})
+
 	// Print the response
 	c.OnResponse(func(r *colly.Response) {
 		log.Printf("Proxy Address: %s\n", r.Request.ProxyURL)
 		//log.Printf("%s\n", r.Body)
+		fmt.Println("r.StatusCode", r.StatusCode)
 	})
 
 	// Create a callback on the XPath query searching for the URLs
@@ -36,7 +41,7 @@ func main() {
 	// Start the collector
 	c.Visit("https://www.shopify.com/sitemap.xml")
 
-	fmt.Println(len(knownUrls))
+	fmt.Println("len(knownUrls)", len(knownUrls))
 	fmt.Println("All known URLs:")
 	for _, url := range knownUrls {
 		fmt.Println(url)
