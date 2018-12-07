@@ -1,6 +1,16 @@
 #### Description
 godown (Go Downloader)
 
+#### Features:
+- Download file to directory
+- Auto create directory when user does not specify destination path
+- Go technique:
+    - goroutines
+    - flag
+    - colly
+    - defer
+    - file
+
 #### Usage
 Command:
 ```xpath
