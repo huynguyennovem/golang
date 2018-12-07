@@ -30,9 +30,9 @@ func getFileName(url string) string {
 	return fileName
 }
 
-func isExists(path string) (bool, error){
+func isExists(path string) (bool, error) {
 	_, err := os.Stat(path)
-	if err == nil{
+	if err == nil {
 		return true, nil
 	}
 	if os.IsNotExist(err) {
