@@ -3,13 +3,12 @@ godown (Go Downloader)
 
 #### Usage
 Command:
-```go
+```xpath
 $ go build godown.go
-$ ./godown --urlOption="https://www.shopify.com/sitemap.xml"
+$ ./godown --urlOption="https://www.shopify.com/sitemap.xml" --desPath="/home/huynq"
 ```
 Result:
-```go
-
+```xpath
 Requesting https://www.shopify.com/sitemap.xml ...
   Download completed.
   --------------------
@@ -19,5 +18,6 @@ Requesting https://www.shopify.com/sitemap.xml ...
 
 Use this everywhere:
 ```xpath
-sudo cp godown /usr/local/bin
+$ sudo cp godown /usr/local/bin
+$ godown --url="https://www.shopify.com/sitemap.xml" --desPath="/home/huynq/abc"
 ```
