@@ -7,15 +7,15 @@ import (
 )
 
 func main() {
-	wordPtr := flag.String("word", "foo", "a string")
+	wordPtr := flag.String("a", "a value", "a string")
 
 	var svar string
-	flag.StringVar(&svar, "svar", "bar", "a string var")
+	flag.StringVar(&svar, "b", "b value", "a string var")
 
 	flag.Parse()
 
-	fmt.Println("---word:", *wordPtr)
-	fmt.Println("---svar:", svar)
+	fmt.Println("---a:", *wordPtr)
+	fmt.Println("---b:", svar)
 	fmt.Println("---flag args: ", flag.Args()) // list tham so flag
 	fmt.Println()
 	fmt.Println(os.Args) // list tham so khi truyen lenh, bao gom ./flag duoc coi nhu 1 tham so

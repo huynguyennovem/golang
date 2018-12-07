@@ -1,1 +1,1 @@
-# golang traning and project
+# Golang traning and projects

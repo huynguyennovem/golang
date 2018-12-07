@@ -1,1 +1,5 @@
-package advance
+package main
+
+func main() {
+
+}
