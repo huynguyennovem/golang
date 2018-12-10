@@ -15,7 +15,7 @@ godown (Go Downloader)
 Command:
 ```xpath
 $ go build godown.go
-$ ./godown --urlOption="https://www.shopify.com/sitemap.xml" --desPath="/home/huynq"
+$ ./godown --url="https://www.shopify.com/sitemap.xml" --desPath="/home/huynq"
 ```
 Result:
 ```xpath
