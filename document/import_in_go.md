@@ -53,7 +53,7 @@ import(
 Việc call rand dễ gây ra conflict giữa 2 packages, vì thế trong case này dùng alias là rất hợp lý
 ```go
 import(
-	"math/rand"
+    "math/rand"
     crand "crypto/rand"
 )
 ```
