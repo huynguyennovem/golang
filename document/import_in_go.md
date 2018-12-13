@@ -46,7 +46,7 @@ Alias cung cấp cho dev một các viết ngắn gọn và dễ nhớ khi dùng
 Hãy xem xét một đoạn import sau:
 ```go
 import(
-	"math/rand"
+    "math/rand"
     "crypto/rand"
 )
 ```
@@ -88,6 +88,7 @@ func main() {
 }
 
 ```
+Chương trình vẫn run bình thường:)
 
 **6. Coding convention trong import**
 
