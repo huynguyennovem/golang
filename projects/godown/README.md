@@ -31,3 +31,7 @@ Use this everywhere:
 $ sudo cp godown /usr/local/bin
 $ godown --url="https://www.shopify.com/sitemap.xml" --desPath="/home/huynq/abc"
 ```
+
+#### Next features
+- Download large file
+- Display process
