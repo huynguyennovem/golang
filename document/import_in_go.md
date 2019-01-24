@@ -116,15 +116,17 @@ import (
 )
 ```
 **7. Usecase** 
+
 Để hình dung rõ hơn về việc sử dụng import trong Go, mình sẽ giới thiệu với các bạn một ví dụ nhỏ.
 Đây là một commit trong sourcecode của k8s, đã được merged. Các bạn có thể tham khảo tại [PR](https://github.com/kubernetes/kubernetes/pull/72014).
 - Problem: Việc mình cần làm là move *pkg/scheduler/algorithmprovider/defaults/compatibility_test.go* sang *pkg/scheduler/api*
 - Solution: 
-	1. Mình tạo thêm package compatibility để tránh lỗi *import cycle* và để tổ chức test case gọn gàng dễ hình hơn.
-	2. Sau khi move file *compatibility_test.go* sang package mới, chạy thử test case, mình gặp phải lỗi *Predicate type not found for MatchNodeSelector*. Dò code trong file test thì khác nhiều chỗ call tới predicate type này. Vậy mình sẽ phải dò xem "MatchNodeSelector" từ đâu mà ra. Sau một hồi tìm kiếm thì mình thấy các predicates và priorities được init tại *pkg/scheduler/algorithmprovider/defaults/register_predicates.go*. Vậy mình sẽ cần phải import thằng này vào.
-	3. Trên đoạn import, mình thêm "k8s.io/kubernetes/pkg/scheduler/algorithmprovider/defaults". Nhưng mình lại gặp lỗi "Unused import...". Oh, đến đây mình có thể vận dụng kiến thức trên rồi đây. Ở đây mình sẽ dùng Blank import, vì được một công đôi việc. 
-	4. Sau khi sửa thành _ "k8s.io/kubernetes/pkg/scheduler/algorithmprovider/defaults", tất cả các test case đã Passed.
+-1. Mình tạo thêm package compatibility để tránh lỗi *import cycle* và để tổ chức test case gọn gàng dễ hình hơn.
+-2. Sau khi move file *compatibility_test.go* sang package mới, chạy thử test case, mình gặp phải lỗi *Predicate type not found for MatchNodeSelector*. Dò code trong file test thì khác nhiều chỗ call tới predicate type này. Vậy mình sẽ phải dò xem "MatchNodeSelector" từ đâu mà ra. Sau một hồi tìm kiếm thì mình thấy các predicates và priorities được init tại *pkg/scheduler/algorithmprovider/defaults/register_predicates.go*. Vậy mình sẽ cần phải import thằng này vào.
+-3. Trên đoạn import, mình thêm "k8s.io/kubernetes/pkg/scheduler/algorithmprovider/defaults". Nhưng mình lại gặp lỗi "Unused import...". Oh, đến đây mình có thể vận dụng kiến thức trên rồi đây. Ở đây mình sẽ dùng Blank import, vì được một công đôi việc. 
+-4. Sau khi sửa thành _ "k8s.io/kubernetes/pkg/scheduler/algorithmprovider/defaults", tất cả các test case đã Passed.
 
 **8. Refer**
+
 - https://github.com/golang/go/wiki/CodeReviewComments#import-dot
 - https://scene-si.org/2018/01/25/go-tips-and-tricks-almost-everything-about-imports/
