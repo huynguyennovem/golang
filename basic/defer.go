@@ -47,9 +47,9 @@ func multi_defer() {
 }
 
 func main() {
-	//base()
+	base()
 
 	//var_value()
 
-	multi_defer()
+	//multi_defer()
 }

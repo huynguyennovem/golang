@@ -9,7 +9,7 @@ import (
 // khi tat ca cac case deu ready thi select se lua chon random
 
 func server1(ch chan string) {
-	time.Sleep(1 * time.Millisecond)
+	time.Sleep(3 * time.Millisecond)
 	ch <- "from server1"
 }
 func server2(ch chan string) {
@@ -28,7 +28,6 @@ func main() {
 		fmt.Println(s1)
 	case s2 := <-output2:
 		fmt.Println(s2)
-	default:
-		fmt.Println("no one")
+
 	}
 }

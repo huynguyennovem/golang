@@ -71,9 +71,37 @@ func passing_pointer() {
 	fmt.Printf("After swap, value of b : %d\n", b)
 }
 
+
+type Person2 struct {
+	firstName string
+	lastName  string
+}
+
+func changeName(p *Person2) {
+	fmt.Println(p.firstName)
+	p.firstName = "Bob"
+
+}
+
+func (x Person2) show() {
+	fmt.Println(x.firstName)
+}
+
 func main() {
-	basic()
+	//basic()
 	//array()
 	//passing_pointer()
 
+	person := Person2 {
+		firstName: "Alice",
+		lastName: "Dow",
+	}
+
+	a := &person;
+	fmt.Println(a)
+	fmt.Println(a.firstName)
+	a.show()
+
+	changeName(&person)
+	fmt.Println(person)
 }
