@@ -1,8 +1,8 @@
-package main
+package _defer
 
 import "fmt"
 
-// duoc thuc thi truoc khi func return (exit)
+// duoc thuc thi truoc khi func return (exit) hoac khi panic() duoc call (dc execute truoc panic)
 // usage: nen su dung khi cac case co default final action da biet truoc. eg: close db after access (by db always need to close)
 
 type person struct {

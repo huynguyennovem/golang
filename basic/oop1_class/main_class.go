@@ -1,6 +1,6 @@
 package oop1_class
 
-import "hello/oop1_class/class"
+import "golang/basic/oop1_class/class"
 
 func main() {
 	//e := class.Employee {
